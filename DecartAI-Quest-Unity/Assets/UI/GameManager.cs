@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
     private void ShowModelSelectionPrompt()
     {
         _state = ExperienceState.WaitingForSelection;
-        Debug.Log("Model selection: Press A for Mirage"); // or B for Lucy - DISABLED
+        Debug.Log("Model selection: Press A for Mirage or B for Lucy");
     }
 
     private void SelectModelAndStart(bool useLucy)
@@ -118,11 +118,10 @@ public class GameManager : MonoBehaviour
 
         menuFader?.FadeOut();
         portal?.Show();
-        // DISABLED: effectCone
-        // if (effectCone)
-        // {
-        //     effectCone.SetActive(true);
-        // }
+        if (effectCone)
+        {
+            effectCone.SetActive(true);
+        }
 
         if (passthroughLayer)
         {
@@ -159,20 +158,12 @@ public class GameManager : MonoBehaviour
         }
 
         portal?.Expand();
-        // DISABLED: effectCone
-        // if (effectCone)
-        // {
-        //     effectCone.SetActive(false);
-        // }
+        if (effectCone)
+        {
+            effectCone.SetActive(false);
+        }
 
         textFader?.FadeIn(delay: 3f);
-
-        // Auto-apply Christmas style
-        if (webRtcConnection)
-        {
-            webRtcConnection.SendCustomPrompt("Christmas World");
-            Debug.Log("Auto-applied Christmas World style");
-        }
 
         if (!portal || !streamParent)
         {
@@ -194,15 +185,14 @@ public class GameManager : MonoBehaviour
                 {
                     SelectModelAndStart(useLucy: false);
                 }
-                // DISABLED: Lucy model selection
-                // else if (OVRInput.GetDown(OVRInput.Button.Two)) // Lucy
-                // {
-                //     SelectModelAndStart(useLucy: true);
-                // }
+                else if (OVRInput.GetDown(OVRInput.Button.Two)) // Lucy
+                {
+                    SelectModelAndStart(useLucy: true);
+                }
                 break;
 
             case ExperienceState.Running:
-                if (OVRInput.GetDown(OVRInput.Button.One)) // DISABLED: || OVRInput.GetDown(OVRInput.Button.Two)
+                if (OVRInput.GetDown(OVRInput.Button.One) || OVRInput.GetDown(OVRInput.Button.Two))
                 {
                     ShowWave();
                 }
@@ -214,9 +204,8 @@ public class GameManager : MonoBehaviour
 
     private void ShowWave()
     {
-        // DISABLED: effectCone
-        // if (effectCone) effectCone.SetActive(true);
-        // StartCoroutine(DisableEffectConeAfterDelay());
+        if (effectCone) effectCone.SetActive(true);
+        StartCoroutine(DisableEffectConeAfterDelay());
 
         if (audioSource && forceFieldSounds.Length > 0)
         {
@@ -233,11 +222,10 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         StopIntroEffect();
-        // DISABLED: effectCone
-        // if (effectCone)
-        // {
-        //     effectCone.SetActive(false);
-        // }
+        if (effectCone)
+        {
+            effectCone.SetActive(false);
+        }
     }
 
     private void StartForceFieldSounds()
