@@ -473,13 +473,6 @@ namespace SimpleWebRTC {
             createVideoReceiver = true;
         }
 
-        private void SetLayerRecursively(GameObject obj, int layer) {
-            obj.layer = layer;
-            foreach (Transform child in obj.transform) {
-                SetLayerRecursively(child.gameObject, layer);
-            }
-        }
-
         private void CreateVideoReceiver() {
             if (createVideoReceiver) {
                 createVideoReceiver = false;
@@ -494,16 +487,6 @@ namespace SimpleWebRTC {
                 receivingRawImage.rectTransform.pivot = new Vector2(0.5f, 0.5f);
                 receivingRawImage.rectTransform.sizeDelta = Vector2.zero;
                 
-                // Assign LensContent layer to the RawImage GameObject and all children
-                int lensContentLayer = LayerMask.NameToLayer("LensContent");
-                if (lensContentLayer != -1) {
-                    SetLayerRecursively(receivingRawImage.gameObject, lensContentLayer);
-                    SimpleWebRTCLogger.Log($"Assigned LensContent layer ({lensContentLayer}) to receiving RawImage and all children");
-                } else {
-                    SimpleWebRTCLogger.LogWarning("LensContent layer not found in project. Please create it in Project Settings > Tags and Layers.");
-                }
-                
-                // Apply stream material if available
                 if (streamMaterial != null) {
                     receivingRawImage.material = streamMaterial;
                     SimpleWebRTCLogger.Log("Applied StreamMaterial to receiving RawImage");
