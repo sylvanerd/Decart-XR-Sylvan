@@ -6,10 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Samples/DecartAI-Quest/DecartAI-Main.unity
-    guid: 07df2896e646146c89bde00c2a4e82e3
+    path: Assets/DecartWorld.unity
+    guid: a9241b8670a00e74b802a13090820211
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1f6e424bb69784f8e8b5df6563fe45de, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a1a3bb74343034748bfcead56c6c2da6, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 53ed30c0f2842b043aed0f65ff92bc35, type: 2}
   m_UseUCBPForAssetBundles: 0
