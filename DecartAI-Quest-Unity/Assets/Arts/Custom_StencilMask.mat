@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Custom_StencilMask
-  m_Shader: {fileID: 4800000, guid: d87c483484af73349975f380d983d3e6, type: 3}
+  m_Shader: {fileID: 4800000, guid: b5fbd774bf2035047834c5d641aa338b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -29,8 +29,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _FadeWidth: 0.3
     - _StencilID: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 0.078431375}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -22,7 +22,7 @@ public class PortalController : UIBehaviour
     private Vector2 _lastSize;
     private float _lastRadius;
 
-    private Vector2 _expandedSize = new (3300, 2200);
+    public Vector2 _expandedSize = new (3300, 2200);
     
     private void Start()
     {
