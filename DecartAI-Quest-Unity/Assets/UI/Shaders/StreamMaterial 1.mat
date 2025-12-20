@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: StreamMaterial_wiping
+  m_Name: StreamMaterial 1
   m_Shader: {fileID: 4800000, guid: dcd23ebd918ca42dca426a1c7116a315, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
