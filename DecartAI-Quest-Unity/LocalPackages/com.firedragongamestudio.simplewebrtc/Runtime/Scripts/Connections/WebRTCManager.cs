@@ -92,7 +92,7 @@ namespace SimpleWebRTC {
               //{"Minecraft", "Minecraft World"},
               //{"Lego", "Lego World"},
               //{"California", "California World"},
-              {"Magical Fantasy", "Magical Fantasy World"},
+              //{"Magical Fantasy", "Magical Fantasy World"},
               //{"Barbie", "Barbie World"},
               //{"Cyberpunk", "Cyberpunk World"},
               //{"Yarn", "Yarn World"},

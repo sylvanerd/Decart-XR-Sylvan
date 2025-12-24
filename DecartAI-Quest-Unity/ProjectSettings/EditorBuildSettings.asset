@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Decart_Clens.unity
     guid: a9241b8670a00e74b802a13090820211
-  - enabled: 0
+  - enabled: 1
     path: Assets/Decart_Wiping.unity
     guid: 7e9c084e47fb81d44b73bd08ae6d656c
   - enabled: 0
